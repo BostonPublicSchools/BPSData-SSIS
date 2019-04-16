@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Load Capacity", "Load Capacity\Load Capacity.dtproj", "{94BF8C7A-056F-4001-93E2-F97C5698B092}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94BF8C7A-056F-4001-93E2-F97C5698B092}.Development|Default.ActiveCfg = Development
+		{94BF8C7A-056F-4001-93E2-F97C5698B092}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D76DA046-56F0-4402-82EE-61C80E454799}
+	EndGlobalSection
+EndGlobal

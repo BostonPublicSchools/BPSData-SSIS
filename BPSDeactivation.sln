@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "BPSDeactivation", "BPSDeactivation\BPSDeactivation.dtproj", "{324A6A34-01CF-4D81-B46B-7520B3E4B36D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{324A6A34-01CF-4D81-B46B-7520B3E4B36D}.Development|Default.ActiveCfg = Development
+		{324A6A34-01CF-4D81-B46B-7520B3E4B36D}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C718E6B5-75B4-4388-8477-873229B361AB}
+	EndGlobalSection
+EndGlobal

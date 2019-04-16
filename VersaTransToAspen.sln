@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "VersaTransToAspen", "VersaTransToAspen\VersaTransToAspen.dtproj", "{686E2102-82C8-4D2C-82C8-06F58E7AC3BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{686E2102-82C8-4D2C-82C8-06F58E7AC3BF}.Development|Default.ActiveCfg = Development
+		{686E2102-82C8-4D2C-82C8-06F58E7AC3BF}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C85DB9FC-F654-493A-B7B6-87107F5E09DD}
+	EndGlobalSection
+EndGlobal
