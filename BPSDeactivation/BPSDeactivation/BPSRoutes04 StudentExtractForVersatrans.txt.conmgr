@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="BPSRoutes04 StudentExtractForVersatrans.txt"
+  DTS:DTSID="{FF207FD1-62BE-4E88-B49F-97B733606B0D}"
+  DTS:CreationName="FILE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="\\bpsroutes04\RMU\VersatransNightlyExport\data\StudentExtractForVersatrans.txt" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
