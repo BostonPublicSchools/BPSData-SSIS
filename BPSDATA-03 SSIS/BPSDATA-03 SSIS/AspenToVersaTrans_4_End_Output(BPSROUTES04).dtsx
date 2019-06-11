@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/14/2019 1:12:14 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="084-140697-003"
+  DTS:CreatorName="ADMINDOM\X05112"
+  DTS:DTSID="{3D998A48-1604-45BC-8DCA-392939DCE927}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.107"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="AspenToVersaTrans_4_End_Output BPSROUTES04"
+  DTS:PackageType="5"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{99BD3BDE-8397-4AD8-A3D4-4D82006EEA65}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\fstCopyDiffFileToStandardImport"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{3476728C-194A-44FD-B8D2-C26EC4DE454E}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="fstCopyDiffFileToStandardImport"
+      DTS:TaskContact="File System Task;Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOverwriteDestFile="True"
+          TaskSourcePath="{4BCEA82C-1804-4CC5-B2DE-E20F888B42F7}"
+          TaskDestinationPath="{FF207FD1-62BE-4E88-B49F-97B733606B0D}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\smtNotifyComplete"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Send Mail Task"
+      DTS:DTSID="{D76E8AE2-2AE5-4DE5-BB0E-29D5CFE4ED00}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="smtNotifyComplete"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{1EE7EEF3-410B-46FA-89B9-CD7D7C677F12}"
+          SendMailTask:From="no-reply@bostonpublicschools.org"
+          SendMailTask:To="AppDevTransport@bostonpublicschools.org"
+          SendMailTask:CC="AppDevAdmin@bostonpublicschools.org"
+          SendMailTask:Subject="Aspen  Export For VersaTrans Completed Successfully"
+          SendMailTask:MessageSource="Good Afternoon,&#xA;&#xA;Files to be imported in to VersaTrans have been created and are ready for use.  The files are located in \\BPSROUTES04\trans\RMU\ and \\BPSROUTES04\trans\RMU\VersatransNightlyExport\data. &#xA;Thank You.&#xA;&#xA;- CONFIDENTIALITY NOTICE -&#xA;&#xA;The documents accompanying this message contain information which is confidential or privileged.  The information is intended to be used for the use of the individual or entity named in this message.  If you are not the intended recipient, be aware that any disclosure, copying, distribution or use of the contents of this message or any attachments is prohibited.  IF YOU HAVE RECEIVED THIS MESSAGE IN ERROR, PLEASE CONTACT THE SENDER AND DELETE ANY MATERIAL FROM YOUR COMPUTER." xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{C14DFE35-29B2-43BC-8849-F057F21128BF}"
+      DTS:From="Package\fstCopyDiffFileToStandardImport"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\smtNotifyComplete" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="233,42"
+          Id="Package\fstCopyDiffFileToStandardImport"
+          TopLeft="60,60" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\smtNotifyComplete"
+          TopLeft="103,154.301886792452" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="173.75,102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.301886792452"
+              Start="0,0"
+              End="0,44.801886792452">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.801886792452" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

@@ -1,0 +1,1078 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/28/2018 1:44:56 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="084-138051-004"
+  DTS:CreatorName="ADMINDOM\X05112"
+  DTS:DTSID="{F725BEEE-D111-4046-90E2-44D1D0F5598A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.107"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="StartegicPlanning_ChoiceBasket"
+  DTS:PackageType="5"
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{4A05CFB4-A669-413D-8E24-0DE53AC490C1}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[BPSDATA-03.BPSStrategicPlanning]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9C56C279-A73D-4EF0-8AF2-60ED18D4FBC8}"
+      DTS:ObjectName="BPSDATA-03.BPSStrategicPlanning">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=BPSDATA-03;Initial Catalog=BPSStrategicPlanning;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ChoiceBasket]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{64D35566-89E4-42AB-B59B-FBF010E24E8E}"
+      DTS:ObjectName="ChoiceBasket">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\X05112\Desktop\ChoiceBasket_2014-2015.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="12"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaAcademicYearDesignator"
+              DTS:DTSID="{EDB7ED41-94A7-4BDF-ABED-024C25216EFF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaSchoolLocalID"
+              DTS:DTSID="{2A708887-4C28-4D7F-A741-850B57719CA8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaSchoolName"
+              DTS:DTSID="{9F3B0AB0-0711-43E1-A86F-7EAA4F37B801}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaSchoolEligibility"
+              DTS:DTSID="{278F166D-FBAF-4B59-8B3C-1403DCF1B6D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaSchoolRank"
+              DTS:DTSID="{892DB513-A34A-46DF-A4C9-9A72191137E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaRound"
+              DTS:DTSID="{62902F68-71C6-4CDC-A7F4-60AB8D0B9902}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaChoice"
+              DTS:DTSID="{C2E25AF2-179D-4415-9CDE-9BCE79DB66B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="12"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ExternalStudentNo"
+              DTS:DTSID="{3752BC98-0BA2-4DC7-BD35-543079BEC3E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaGradeLevel"
+              DTS:DTSID="{DE280329-A03B-4BD6-B081-6A1434F964B6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaRace"
+              DTS:DTSID="{60142284-7F3B-4465-93EB-A5091DB8BE8F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaProgramCode"
+              DTS:DTSID="{88812727-EF9F-4428-8DF1-75BF75F603C3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaNeighborhood"
+              DTS:DTSID="{51FCA82A-CD34-46B9-B36E-4E67CF86A759}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaZipCode"
+              DTS:DTSID="{A1EF573B-3E67-4251-B234-26C23C569AFC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaCluster"
+              DTS:DTSID="{18C2B737-9B3C-4C43-A7F9-FC242B5C1EF6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaCartesianXCoordinate"
+              DTS:DTSID="{3E6EC7CD-07A3-44C0-9523-68E826D2BF15}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaCartesianYCoordinate"
+              DTS:DTSID="{49F6ABE2-4CD1-4C94-AB36-319D94A08348}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaGeo"
+              DTS:DTSID="{2ED692AD-4EBB-4F9B-8659-53C790BF8598}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cbaAddressLine"
+              DTS:DTSID="{B012B47A-42DA-4E85-87A2-D3CABEC3F64F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Large CSV File"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B3D3C0A4-1AFE-42FD-BAB2-5F6450880E20}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Large CSV File"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Large CSV File\Bari File"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Bari File">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Large CSV File\Bari File.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ChoiceBasket]"
+                  connectionManagerRefId="Package.ConnectionManagers[ChoiceBasket]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaAcademicYearDesignator]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="cbaAcademicYearDesignator"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaAcademicYearDesignator]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaAcademicYearDesignator]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaSchoolLocalID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cbaSchoolLocalID"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaSchoolLocalID]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaSchoolLocalID]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaSchoolName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cbaSchoolName"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaSchoolName]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaSchoolName]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaSchoolEligibility]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cbaSchoolEligibility"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaSchoolEligibility]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaSchoolEligibility]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaSchoolRank]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cbaSchoolRank"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaSchoolRank]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaSchoolRank]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaRound]"
+                      cachedDataType="i4"
+                      cachedName="cbaRound"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaRound]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaRound]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaChoice]"
+                      cachedDataType="i4"
+                      cachedName="cbaChoice"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaChoice]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaChoice]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[ExternalStudentNo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="12"
+                      cachedName="ExternalStudentNo"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[ExternalStudentNo]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[ExternalStudentNo]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaGradeLevel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="cbaGradeLevel"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaGradeLevel]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaGradeLevel]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaRace]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="cbaRace"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaRace]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaRace]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaProgramCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="4"
+                      cachedName="cbaProgramCode"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaProgramCode]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaProgramCode]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaNeighborhood]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="cbaNeighborhood"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaNeighborhood]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaNeighborhood]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaZipCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="cbaZipCode"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaZipCode]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaZipCode]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaCluster]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="cbaCluster"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaCluster]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaCluster]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaCartesianXCoordinate]"
+                      cachedDataType="r8"
+                      cachedName="cbaCartesianXCoordinate"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaCartesianXCoordinate]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaCartesianXCoordinate]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaCartesianYCoordinate]"
+                      cachedDataType="r8"
+                      cachedName="cbaCartesianYCoordinate"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaCartesianYCoordinate]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaCartesianYCoordinate]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaGeo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="cbaGeo"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaGeo]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaGeo]" />
+                    <inputColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].Columns[cbaAddressLine]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="cbaAddressLine"
+                      externalMetadataColumnId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaAddressLine]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaAddressLine]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaAcademicYearDesignator]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      name="cbaAcademicYearDesignator" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaSchoolLocalID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbaSchoolLocalID" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaSchoolName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbaSchoolName" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaSchoolEligibility]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbaSchoolEligibility" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaSchoolRank]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbaSchoolRank" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaRound]"
+                      dataType="i4"
+                      name="cbaRound" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaChoice]"
+                      dataType="i4"
+                      name="cbaChoice" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[ExternalStudentNo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      name="ExternalStudentNo" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaGradeLevel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="cbaGradeLevel" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaRace]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="cbaRace" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaProgramCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="cbaProgramCode" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaNeighborhood]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbaNeighborhood" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaZipCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="cbaZipCode" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaCluster]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="cbaCluster" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaCartesianXCoordinate]"
+                      dataType="r8"
+                      name="cbaCartesianXCoordinate" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaCartesianYCoordinate]"
+                      dataType="r8"
+                      name="cbaCartesianYCoordinate" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaGeo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="cbaGeo" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input].ExternalColumns[cbaAddressLine]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="cbaAddressLine" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Large CSV File\StartegicPlanningQuery"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="StartegicPlanningQuery"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select cbaAcademicYearDesignator,cbaSchoolLocalID,cbaSchoolName,cbaSchoolEligibility,cbaSchoolRank,
+cbaRound,cbaChoice,ExternalStudentNo,cbaGradeLevel,cbaRace,cbaProgramCode,cbaNeighborhood,cbaZipCode,
+cbaCluster,cbaCartesianXCoordinate,cbaCartesianYCoordinate,cbaGeo,cbaAddressLine
+from ChoiceBasket
+inner join ExternalStudent
+on cbaStudentLocalID = StudentNo collate SQL_Latin1_General_CP1_CI_AS
+--where cbaacademicyeardesignator='SY 2014-2015'</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Large CSV File\StartegicPlanningQuery.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[BPSDATA-03.BPSStrategicPlanning]"
+                  connectionManagerRefId="Package.ConnectionManagers[BPSDATA-03.BPSStrategicPlanning]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaAcademicYearDesignator]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaAcademicYearDesignator]"
+                      length="12"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaAcademicYearDesignator]"
+                      name="cbaAcademicYearDesignator"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaSchoolLocalID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaSchoolLocalID]"
+                      length="50"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaSchoolLocalID]"
+                      name="cbaSchoolLocalID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaSchoolName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaSchoolName]"
+                      length="50"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaSchoolName]"
+                      name="cbaSchoolName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaSchoolEligibility]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaSchoolEligibility]"
+                      length="50"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaSchoolEligibility]"
+                      name="cbaSchoolEligibility"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaSchoolRank]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaSchoolRank]"
+                      length="50"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaSchoolRank]"
+                      name="cbaSchoolRank"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaRound]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaRound]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaRound]"
+                      name="cbaRound"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaChoice]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaChoice]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaChoice]"
+                      name="cbaChoice"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[ExternalStudentNo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[ExternalStudentNo]"
+                      length="12"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[ExternalStudentNo]"
+                      name="ExternalStudentNo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaGradeLevel]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaGradeLevel]"
+                      length="4"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaGradeLevel]"
+                      name="cbaGradeLevel"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaRace]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaRace]"
+                      length="20"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaRace]"
+                      name="cbaRace"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaProgramCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaProgramCode]"
+                      length="4"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaProgramCode]"
+                      name="cbaProgramCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaNeighborhood]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaNeighborhood]"
+                      length="50"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaNeighborhood]"
+                      name="cbaNeighborhood"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaZipCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaZipCode]"
+                      length="5"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaZipCode]"
+                      name="cbaZipCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaCluster]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaCluster]"
+                      length="20"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaCluster]"
+                      name="cbaCluster"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaCartesianXCoordinate]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaCartesianXCoordinate]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaCartesianXCoordinate]"
+                      name="cbaCartesianXCoordinate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaCartesianYCoordinate]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaCartesianYCoordinate]"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaCartesianYCoordinate]"
+                      name="cbaCartesianYCoordinate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaGeo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaGeo]"
+                      length="3"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaGeo]"
+                      name="cbaGeo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaAddressLine]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaAddressLine]"
+                      length="100"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].Columns[cbaAddressLine]"
+                      name="cbaAddressLine"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaAcademicYearDesignator]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      name="cbaAcademicYearDesignator" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaSchoolLocalID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbaSchoolLocalID" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaSchoolName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbaSchoolName" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaSchoolEligibility]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbaSchoolEligibility" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaSchoolRank]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbaSchoolRank" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaRound]"
+                      dataType="i4"
+                      name="cbaRound" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaChoice]"
+                      dataType="i4"
+                      name="cbaChoice" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[ExternalStudentNo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      name="ExternalStudentNo" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaGradeLevel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="cbaGradeLevel" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaRace]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="cbaRace" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaProgramCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      name="cbaProgramCode" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaNeighborhood]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="cbaNeighborhood" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaZipCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="cbaZipCode" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaCluster]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="cbaCluster" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaCartesianXCoordinate]"
+                      dataType="r8"
+                      name="cbaCartesianXCoordinate" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaCartesianYCoordinate]"
+                      dataType="r8"
+                      name="cbaCartesianYCoordinate" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaGeo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="cbaGeo" />
+                    <externalMetadataColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output].ExternalColumns[cbaAddressLine]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="cbaAddressLine" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaAcademicYearDesignator]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaAcademicYearDesignator]"
+                      name="cbaAcademicYearDesignator" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaSchoolLocalID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaSchoolLocalID]"
+                      name="cbaSchoolLocalID" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaSchoolName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaSchoolName]"
+                      name="cbaSchoolName" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaSchoolEligibility]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaSchoolEligibility]"
+                      name="cbaSchoolEligibility" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaSchoolRank]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaSchoolRank]"
+                      name="cbaSchoolRank" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaRound]"
+                      dataType="i4"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaRound]"
+                      name="cbaRound" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaChoice]"
+                      dataType="i4"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaChoice]"
+                      name="cbaChoice" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[ExternalStudentNo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="12"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[ExternalStudentNo]"
+                      name="ExternalStudentNo" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaGradeLevel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaGradeLevel]"
+                      name="cbaGradeLevel" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaRace]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaRace]"
+                      name="cbaRace" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaProgramCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="4"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaProgramCode]"
+                      name="cbaProgramCode" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaNeighborhood]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaNeighborhood]"
+                      name="cbaNeighborhood" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaZipCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaZipCode]"
+                      name="cbaZipCode" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaCluster]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaCluster]"
+                      name="cbaCluster" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaCartesianXCoordinate]"
+                      dataType="r8"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaCartesianXCoordinate]"
+                      name="cbaCartesianXCoordinate" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaCartesianYCoordinate]"
+                      dataType="r8"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaCartesianYCoordinate]"
+                      name="cbaCartesianYCoordinate" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaGeo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaGeo]"
+                      name="cbaGeo" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaAddressLine]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[cbaAddressLine]"
+                      name="cbaAddressLine" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Large CSV File.Paths[OLE DB Source Output]"
+              endId="Package\Large CSV File\Bari File.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Large CSV File\StartegicPlanningQuery.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Large CSV File"
+          TopLeft="204,73" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Large CSV File">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="117,42"
+          Id="Package\Large CSV File\Bari File"
+          TopLeft="258,182" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Large CSV File\StartegicPlanningQuery"
+          TopLeft="221,51" />
+        <EdgeLayout
+          Id="Package\Large CSV File.Paths[OLE DB Source Output]"
+          TopLeft="316,93">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,89"
+              Start="0,0"
+              End="0,81.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,81.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Large CSV File\StartegicPlanningQuery">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

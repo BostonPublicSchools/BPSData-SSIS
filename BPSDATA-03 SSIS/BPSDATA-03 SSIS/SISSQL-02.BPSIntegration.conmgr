@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="SISSQL-02 BPSIntegration"
+  DTS:DTSID="{152996EB-3242-4F34-90A0-C39821D177D9}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::SISSQL02_ConnectionString]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=SISSQL-02;User ID=BPSIntegration;Initial Catalog=x2data;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

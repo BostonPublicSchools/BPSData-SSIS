@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="BPSInterface BPSIntegration"
+  DTS:DTSID="{567991DC-DAB6-4D46-8927-7AE9726750D8}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="ServerName">@[$Project::ServerName]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=BPSDATA-03;User ID=BPSIntegration;Initial Catalog=BPSInterface;Provider=SQLOLEDB.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Load Current Active Transportation-{567991DC-DAB6-4D46-8927-7AE9726750D8}084-137984-003.BPSInterface.BPSIntegration;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAorCMvApxnk2/Kxy1BPw/RwAAAAACAAAAAAADZgAAwAAAABAAAACQ+vP5deNFJcUrB9HqntYTAAAAAASAAACgAAAAEAAAAHUVjTFVOxrOAMuD/lLEveV4AAAAdJevR6QU25Lx17R0fM3xC7UGmdRNh6JkC75fWtzxGVZzWSJxqT85QeVeTosooeolJunfU5Fw4W48S0zHunBsEe0C4bA6nM3Wm6Oq+H1iZwOsQBSj4elP1m851TnfDFtbBV2t/gew+bjB9eFTdQMmN4a6OHUpH3mhFAAAAIKYtjbq6Kl7ccUvqUpajnke75Sg</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="BPSROUTES04 SY_Live_RP BPSIntegration"
+  DTS:DTSID="{14A4822A-2A69-471E-A05A-1B3EFA4C0F14}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=BPSROUTES04;User ID=BPSINTRANET;Initial Catalog=SY_Live_RP;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAorCMvApxnk2/Kxy1BPw/RwAAAAACAAAAAAADZgAAwAAAABAAAAD++QjaNMvb0QTzgtnSUQgOAAAAAASAAACgAAAAEAAAAE7c7tIRhZc0UpH6ryNEbX14AAAAiy0rdghXlrsYCLrv93vi8UzzDDZhBXjyN4METGJ1fn8lsDa0a/+OijC4uUduAoDt3tEn7stckWVC91Fapy4uJxi/KW1uIM1rwWkZtI7eBeonZoojjhNDzCE6sY5fU2r2CJdoLfABXnH4Hty2KLsXDDrd4PUUIpOZFAAAACk1rocfZ6R7u8dmOeQEheEQy91N</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

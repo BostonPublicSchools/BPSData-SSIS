@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="BPSRoutes04 BPSTransportationExportDiff.txt"
+  DTS:DTSID="{4BCEA82C-1804-4CC5-B2DE-E20F888B42F7}"
+  DTS:CreationName="FILE">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">"\\\\BPSROUTES04\\RMU\\" + (DT_STR, 4, 1252) YEAR(GETDATE()) +  RIGHT("0" + (DT_STR, 2, 1252)  MONTH(GETDATE()), 2) + RIGHT("0" + (DT_STR, 2, 1252) DAY(GETDATE()), 2) + "BPSTransportationExportDiff.txt"</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="\\BPSROUTES04\RMU\20190606BPSTransportationExportDiff.txt" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
