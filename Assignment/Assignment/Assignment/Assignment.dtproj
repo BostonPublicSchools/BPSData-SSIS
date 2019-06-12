@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">084-140699-003</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAorCMvApxnk2/Kxy1BPw/RwAAAAACAAAAAAADZgAAwAAAABAAAABbxXENfiOMmy6A7cv8+mk9AAAAAASAAACgAAAAEAAAAB5ZejLiniveYYDJw0m0Wx2IAAAA7ApV+fvZ+gInmGNwGdMNRI6ombr/LXIQ4JjsXq8+udV/KSWUkKTfozpdAT4QQlLupHKTEougdGSrmYAdhcbt3DR7kqcgXxBZKSopVm3bJWw3b+KaVwFWzypLZH7m0AHzRyEa/5lhU2mJ9G/NbMV9T8YUqOaJJD2jLnSSPZE2i+9fMnHyQx9REhQAAABh4AMWSKKgD/ZSC0LmMla1YxktxQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAorCMvApxnk2/Kxy1BPw/RwAAAAACAAAAAAADZgAAwAAAABAAAACykh/Gnptb9g/8RA/rLc5GAAAAAASAAACgAAAAEAAAAFdgXXs6PLZmqSyIEcFZ5BGIAAAA2TrJcrp2YbiO+Sj+rilBLwgGhnkVEbq0g2GSMcrLXTQMv7U6UXejPceNAduqSaCBGTVTTMTygjtxgQNnTVQCDMRnYflBJ7OSNgZfOXNIhYBs6b4JYVfTQ79zEU9BxF/ctd0oY4CKTwT0FZqsVme1NTahiq6Cp004oqDU4ihl8bZK96qJmBRQQRQAAAAld+VklBaqFaNu2Id4MU9v+EJpcA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -321,31 +321,16 @@
                 <SSIS:Property SSIS:Name="Name">StoredValueDeactivation</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">73</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">75</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{80425ED3-7124-4A27-ABD4-F519B8BFD08C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F096C8ED-287A-41D1-8E19-EBD0EE102256}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="CM.SISSQL-02.x2data.BPSIntegration.ConnectionString">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=SISSQL-02;User ID=BPSIntegration;Initial Catalog=x2data;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
                 <SSIS:Parameter SSIS:Name="CM.SISSQL-02.x2data.BPSIntegration.InitialCatalog">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
@@ -585,10 +570,10 @@
                 <SSIS:Property SSIS:Name="Name">MyBPSUpdateInactiveStudents</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">7</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{08AD2782-CFB4-4DBB-A462-8270102E7F43}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{8B0CCA7E-20C8-4B3E-B02B-D06D3028DC9B}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -719,7 +704,13 @@
         <ConnectionSecurityMappings />
         <DatabaseStorageLocations />
         <TargetServerVersion>SQLServer2017</TargetServerVersion>
-        <ParameterConfigurationValues />
+        <ParameterConfigurationValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2019-06-12T13:16:26.4833714Z</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationValues>
       </Options>
     </Configuration>
   </Configurations>

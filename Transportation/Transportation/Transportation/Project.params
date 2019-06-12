@@ -142,7 +142,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">Data Source=BPSDATA-03;User ID=BPSINTEGRATION;Initial Catalog=BPSInterface;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</SSIS:Property>
+        SSIS:Name="Value">Data Source=BPSDATA-03;User ID=BPSINTEGRATION;Initial Catalog=BPSInterface;Provider=SQLNCLI11.1;Persist Security Info=True;Integrated Security = SSPI;Auto Translate=False;</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>

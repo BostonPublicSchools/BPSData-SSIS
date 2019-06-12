@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="9/14/2018 1:54:56 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Load Parents"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{1CF18B1D-2393-4DDF-81CB-FC71B40847DB}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{7AF4A6F0-DF14-4E99-BEA3-53CF8D86526A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -103,8 +103,8 @@ and cp.PSN_NAME_FIRST is not null and cp.PSN_NAME_LAST is not NULL</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task Aspen\Aspen OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
-                  connectionManagerRefId="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
+                  connectionManagerID="{567991DC-DAB6-4D46-8927-7AE9726750D8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BPSInterface BPSIntegration]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -500,8 +500,8 @@ where [refTable].[parStdId] = ? and [refTable].[parParentUniqueId] = ?</property
               <connections>
                 <connection
                   refId="Package\Data Flow Task Aspen\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
-                  connectionManagerRefId="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
+                  connectionManagerID="{567991DC-DAB6-4D46-8927-7AE9726750D8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BPSInterface BPSIntegration]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -647,8 +647,8 @@ where [refTable].[parStdId] = ? and [refTable].[parParentUniqueId] = ?</property
               <connections>
                 <connection
                   refId="Package\Data Flow Task Aspen\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
-                  connectionManagerRefId="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
+                  connectionManagerID="{567991DC-DAB6-4D46-8927-7AE9726750D8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BPSInterface BPSIntegration]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -988,8 +988,8 @@ order by std_localid</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task MyBPS\BPS_Source.Connections[OleDbConnection]"
-                  connectionManagerID="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
-                  connectionManagerRefId="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
+                  connectionManagerID="{567991DC-DAB6-4D46-8927-7AE9726750D8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BPSInterface BPSIntegration]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1583,8 +1583,8 @@ order by std_localid</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task MyBPS\Insert_parent.Connections[OleDbConnection]"
-                  connectionManagerID="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
-                  connectionManagerRefId="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
+                  connectionManagerID="{567991DC-DAB6-4D46-8927-7AE9726750D8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BPSInterface BPSIntegration]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1790,8 +1790,8 @@ where [refTable].[parStdId] = ? and [refTable].[parParentUniqueId] = ?</property
               <connections>
                 <connection
                   refId="Package\Data Flow Task MyBPS\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
-                  connectionManagerRefId="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
+                  connectionManagerID="{567991DC-DAB6-4D46-8927-7AE9726750D8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BPSInterface BPSIntegration]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -2338,8 +2338,8 @@ order by n.studentno</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task MyBPS\MyBPS_Source.Connections[OleDbConnection]"
-                  connectionManagerID="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
-                  connectionManagerRefId="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
+                  connectionManagerID="{567991DC-DAB6-4D46-8927-7AE9726750D8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BPSInterface BPSIntegration]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2839,8 +2839,8 @@ order by n.studentno</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task MyBPS\Update_Parent.Connections[OleDbConnection]"
-                  connectionManagerID="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
-                  connectionManagerRefId="{9AE2705B-C330-42D3-A894-7FD29A51E11A}:invalid"
+                  connectionManagerID="{567991DC-DAB6-4D46-8927-7AE9726750D8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[BPSInterface BPSIntegration]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3049,7 +3049,7 @@ order by n.studentno</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9AE2705B-C330-42D3-A894-7FD29A51E11A}"
+          SQLTask:Connection="{567991DC-DAB6-4D46-8927-7AE9726750D8}"
           SQLTask:BypassPrepare="False"
           SQLTask:SqlStatementSource="Update p set parFirstName = PSN_NAME_FIRST&#xA;,parMiddleName = PSN_NAME_MIDDLE&#xA;,parLastSurname = PSN_NAME_LAST&#xA;,parLastModifiedDate = isnull(DATEADD(S, CTJ_LAST_MODIFIED/1000, '1970-01-01 00:00:00'),getdate()) &#xA;FROM BPS.Parent p (NOLOCK)&#xA;join BPSInterface.BPS.Student std (NOLOCK) &#xA;on std.StdId = parStdId &#xA;JOIN ASPENDB.x2data.dbo.STUDENT s (NOLOCK)&#xA;on std.std_localid = STD_ID_LOCAL collate database_default&#xA;--JOIN ASPENDB.x2data.dbo.PERSON p (NOLOCK)&#xA;--ON p.PSN_OID = s.STD_PSN_OID&#xA;JOIN ASPENDB.x2data.dbo.STUDENT_CONTACT sc (NOLOCK)&#xA;ON sc.CTJ_STD_OID = s.STD_OID&#xA;AND sc.CTJ_RELATIONSHIP_CODE IN ('Parent 2', 'Guardian', 'Parent/Guardian', 'Parent', 'Parent 1', 'Foster Parent','Caregiver')&#xA;JOIN ASPENDB.x2data.dbo.CONTACT c (NOLOCK)&#xA;ON c.CNT_OID = sc.CTJ_CNT_OID&#xA;JOIN ASPENDB.x2data.dbo.PERSON cp&#xA;ON cp.PSN_OID = c.CNT_PSN_OID&#xA;--join ASPENDB.x2data.[dbo].PERSON_ADDRESS ca WITH (NOLOCK) ON ca.ADR_OID = cp.PSN_ADR_OID_PHYSICAL&#xA;WHERE std.std_type in ('Active','Registered')&#xA;and parParentUniqueId = PSN_OID collate database_default" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
@@ -3315,6 +3315,11 @@ order by n.studentno</property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
@@ -3323,7 +3328,7 @@ order by n.studentno</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3333,7 +3338,7 @@ order by n.studentno</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3670,7 +3675,7 @@ order by n.studentno</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3680,7 +3685,7 @@ order by n.studentno</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

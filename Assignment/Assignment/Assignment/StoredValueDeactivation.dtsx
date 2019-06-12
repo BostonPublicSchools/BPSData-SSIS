@@ -12,9 +12,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="StoredValueDeactivation"
   DTS:PackageType="5"
-  DTS:ProtectionLevel="0"
-  DTS:VersionBuild="73"
-  DTS:VersionGUID="{80425ED3-7124-4A27-ABD4-F519B8BFD08C}">
+  DTS:VersionBuild="75"
+  DTS:VersionGUID="{F096C8ED-287A-41D1-8E19-EBD0EE102256}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,13 +22,11 @@
       DTS:CreationName="OLEDB"
       DTS:DTSID="{82657DCE-AD35-4648-BA36-B60881361AED}"
       DTS:ObjectName="SISSQL-02.x2data.BPSIntegration">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::ASPENDBBPSIntegration_ConnectionString]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=SISSQL-02;User ID=BPSIntegration;Initial Catalog=x2data;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"></DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=SISSQL-02;User ID=BPSIntegration;Initial Catalog=x2data;Provider=SQLNCLI11.1;Persist Security Info=True;Integrated Security = SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -340,7 +337,7 @@ WHERE   C.TRS_FIELDA_002 = 1
           SendMailTask:Subject="Stored Value Deactivations"
           SendMailTask:MessageSource="Stored Value Deactivations" xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask">
           <SendMailTask:Attachments
-            SendMailTask:FileName="D:\StoredValuePassDeactivation06112019.txt" />
+            SendMailTask:FileName="D:\StoredValuePassDeactivation06122019.txt" />
         </SendMailTask:SendMailTaskData>
       </DTS:ObjectData>
     </DTS:Executable>

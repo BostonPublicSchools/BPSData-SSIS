@@ -12,8 +12,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Edfi_FileLoading"
   DTS:PackageType="5"
-  DTS:VersionBuild="216"
-  DTS:VersionGUID="{9A08436A-4261-4E37-B53D-91CFB681836E}">
+  DTS:VersionBuild="217"
+  DTS:VersionGUID="{009A959D-26A1-4941-B86E-A9BC7346B476}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -320,7 +320,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="ArchiveFullFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">E:\SSIS\ArchiveFolder\EdPlanToAspen_20190611.txt</DTS:VariableValue>
+        DTS:DataType="8">E:\SSIS\ArchiveFolder\EdPlanToAspen_20190612.txt</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -3494,7 +3494,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{9AE2705B-C330-42D3-A894-7FD29A51E11A}"
+          SQLTask:Connection="{567991DC-DAB6-4D46-8927-7AE9726750D8}"
           SQLTask:SqlStatementSource="Waitfor Delay '00:00:30'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>

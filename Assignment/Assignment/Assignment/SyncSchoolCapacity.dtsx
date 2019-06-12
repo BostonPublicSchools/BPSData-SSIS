@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="SyncSchoolCapacity"
   DTS:PackageType="5"
-  DTS:VersionBuild="93"
-  DTS:VersionGUID="{8445AFBD-37A0-4F21-865E-D58A0321093C}">
+  DTS:VersionBuild="94"
+  DTS:VersionGUID="{38D289F1-698F-4F43-A0BA-234AF03F6D44}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -2381,7 +2381,7 @@ where [refTable].[scaSchId] = ? and [refTable].[scaGradeLevel] = ? and [refTable
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{567991DC-DAB6-4D46-8927-7AE9726750D8}"
+          SQLTask:Connection="{9AE2705B-C330-42D3-A894-7FD29A51E11A}"
           SQLTask:SqlStatementSource="IF EXISTS(SELECt 1 from  Eligibility.SchoolCapacity SC &#xA;where (scaSCA_OID is null or scaSCA_OID = ' '))&#xA;BEGIN&#xA;&#xA;UPDATE   SC&#xA;SET SC.scaSCA_OID=a.SCA_OID&#xA;FROM&#xA;Eligibility.SchoolCapacity SC, (SELECT SKL_SCHOOL_ID ,&#xA;SCA_GRADE_LEVEL ,&#xA;SCA_PROGRAM_CODE ,&#xA;CTX_CONTEXT_ID ,&#xA;SCA_OID&#xA;FROM ASPENDB.x2data.dbo.SCHOOL&#xA;JOIN ASPENDB.x2data.dbo.SCHOOL_CAPACITY ON SKL_OID = SCA_SKL_OID&#xA;JOIN ASPENDB.x2data.dbo.DISTRICT_SCHOOL_YEAR_CONTEXT ON CTX_OID = SCA_CTX_OID&#xA;AND CTX_CONTEXT_ID &gt;= '2017-2018') a&#xA;where (scaSCA_OID is null or scaSCA_OID = ' ')&#xA;and scayearcontext &gt;='2017-2018'&#xA;and sc.scaschid collate SQL_Latin1_General_CP1_CI_AS=a.SKL_SCHOOL_ID&#xA;and sc.scaGradelevel collate SQL_Latin1_General_CP1_CI_AS =a.SCA_GRADE_LEVEL&#xA;and sc.scaProgramid collate SQL_Latin1_General_CP1_CI_AS =a.SCA_PROGRAM_CODE&#xA;END&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2682,7 +2682,7 @@ where [refTable].[scaSchId] = ? and [refTable].[scaGradeLevel] = ? and [refTable
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2692,7 +2692,7 @@ where [refTable].[scaSchId] = ? and [refTable].[scaGradeLevel] = ? and [refTable
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
