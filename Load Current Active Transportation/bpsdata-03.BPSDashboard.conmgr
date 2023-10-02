@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="bpsdata-03.BPSDashboard"
+  DTS:DTSID="{6ACBAD19-52EB-4BA8-99DA-6BBE135E1A91}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=BPSDATA-03;User ID=BPSIntegration;Initial Catalog=BPSDashboard;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKZQHJPSqDEGHS4Lo06sKzAAAAAACAAAAAAADZgAAwAAAABAAAACczUaRJq4tu7PeH1mWgFkQAAAAAASAAACgAAAAEAAAALBYu/NnEB79XreyaxLqtIh4AAAA13SDUtuMYR//WyLcqZS/Mh+OgvQNVFa4xFbOWjp/JWy8eUJijb/PqCmkWB8XlXbK0VUT2xfKCs4nQIzlSp46pRwOqSXKdgFiDGd4euUWnOBbNJkRPkTbMv4SYkCjeB0sDY1I1ETFIpIHMexicjOrpGF4TbI6zZw6FAAAAEta0mKvULhSawQxR9JOTzbYNDJY</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

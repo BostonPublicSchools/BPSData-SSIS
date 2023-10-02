@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/4/2014 11:01:15 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="BPSDATA"
+  DTS:CreatorName="ADMINDOM\114600"
+  DTS:DTSID="{A7F8C81A-7926-497D-9FF1-7F4D7EB01BEB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="AspenToVersaTrans_NextYear_4_End_Output_BPSROUTES03"
+  DTS:PackageType="5"
+  DTS:VersionBuild="165"
+  DTS:VersionGUID="{A764114F-9EA5-44AC-8880-277998D58B92}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{11FB8BE6-5897-4285-B42A-18CBBBE97958}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="isAspenJobComplete">
+      <DTS:VariableValue
+        DTS:DataType="11">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E06B956D-B7CB-49D6-8323-A07070336815}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="JobStatus">
+      <DTS:VariableValue
+        DTS:DataType="8">99</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\fstCopyDiffFileToStandardImport"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{CA5EA677-0BAB-4A4E-858F-EDC58822BC3F}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="fstCopyDiffFileToStandardImport"
+      DTS:TaskContact="File System Task;Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOverwriteDestFile="True"
+          TaskSourcePath="{9E720098-EB0B-499E-BE4F-38B2C46AC51C}"
+          TaskDestinationPath="{32AA1EAE-5CCA-4F53-A0FB-7EB705D599DC}" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\smtNotifyComplete"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Send Mail Task"
+      DTS:DTSID="{5D1D19FA-20D1-4011-ABA2-321505A985D4}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="2057"
+      DTS:ObjectName="smtNotifyComplete"
+      DTS:TaskContact="Send Mail Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{77120556-90B9-4314-AE26-C34E886DF57C}"
+          SendMailTask:From="no-reply@bostonpublicschools.org"
+          SendMailTask:To="AppDevTransport@bostonpublicschools.org"
+          SendMailTask:CC="AppDevAdmin@bostonpublicschools.org"
+          SendMailTask:Subject="Aspen  Next Year Export For VersaTrans Completed Successfully"
+          SendMailTask:MessageSource="Good Afternoon,&#xA;&#xA;Next year's transportation files to be imported in to VersaTrans have been created and are ready for use.  The files are located in \\BPSROUTES03\trans\RMU\ and \\BPSROUTES03\trans\RMU\VersatransNightlyExport\data. &#xA;Thank You.&#xA;&#xA;- CONFIDENTIALITY NOTICE -&#xA;&#xA;The documents accompanying this message contain information which is confidential or privileged.  The information is intended to be used for the use of the individual or entity named in this message.  If you are not the intended recipient, be aware that any disclosure, copying, distribution or use of the contents of this message or any attachments is prohibited.  IF YOU HAVE RECEIVED THIS MESSAGE IN ERROR, PLEASE CONTACT THE SENDER AND DELETE ANY MATERIAL FROM YOUR COMPUTER." xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{5C2A15A2-C8DF-4D96-9FAD-79AF917D3902}"
+      DTS:From="Package\fstCopyDiffFileToStandardImport"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\smtNotifyComplete" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="233,42"
+          Id="Package\fstCopyDiffFileToStandardImport"
+          TopLeft="27.27358490566,27.349056603774" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\smtNotifyComplete"
+          TopLeft="82.2735849056601,151.650943396226" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="147.02358490566,69.349056603774">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,82.301886792452"
+              Start="0,0"
+              End="0,74.801886792452">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,74.801886792452" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
