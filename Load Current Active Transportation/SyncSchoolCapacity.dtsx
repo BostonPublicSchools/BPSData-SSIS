@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="10/17/2017 2:10:57 PM"
@@ -7,15 +7,88 @@
   DTS:CreatorName="ADMINDOM\X05112"
   DTS:DTSID="{588EE4E0-FB69-4CC8-AEA1-9D0857BE3BC9}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="14.0.3008.28"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
   DTS:LocaleID="1033"
   DTS:ObjectName="SyncSchoolCapacity"
   DTS:PackageType="5"
-  DTS:VersionBuild="90"
-  DTS:VersionGUID="{2015C26F-0A52-44D5-B771-C2E45AEA54E1}">
+  DTS:VersionBuild="96"
+  DTS:VersionGUID="{9EFB35D1-6176-47B7-85E5-32E82BC128D6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:LogProviders>
+    <DTS:LogProvider
+      DTS:ConfigString="BPSInterface BPSIntegration"
+      DTS:CreationName="Microsoft.LogProviderSQLServer"
+      DTS:Description="Writes log entries for events to a SQL Server database"
+      DTS:DTSID="{6459A811-D866-41F9-9914-E4AAC52F1102}"
+      DTS:ObjectName="SSIS log provider for SQL Server">
+      <DTS:ObjectData>
+        <InnerObject />
+      </DTS:ObjectData>
+    </DTS:LogProvider>
+  </DTS:LogProviders>
   <DTS:Variables />
+  <DTS:LoggingOptions
+    DTS:FilterKind="0"
+    DTS:LoggingMode="2">
+    <DTS:Property
+      DTS:DataType="8"
+      DTS:Name="EventFilter">3,7,OnError,13,OnInformation,12,OnTaskFailed</DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnError"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnInformation"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+    <DTS:Property
+      DTS:EventName="OnTaskFailed"
+      DTS:Name="ColumnFilter">
+      <DTS:Property
+        DTS:Name="Computer">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="Operator">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceName">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="SourceID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="ExecutionID">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="MessageText">-1</DTS:Property>
+      <DTS:Property
+        DTS:Name="DataBytes">-1</DTS:Property>
+    </DTS:Property>
+  </DTS:LoggingOptions>
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Data Flow Task"
@@ -27,6 +100,8 @@
       DTS:ObjectName="Data Flow Task"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <pipeline
           version="1">
@@ -56,7 +131,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">EXEC [Eligibility].[VersaTransExtract]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">EXEC  [Eligibility].[GetSchoolCapacityFromAspen]</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -613,7 +688,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1380,13 +1455,13 @@
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [Eligibility].[SchoolCapacity]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Eligibility].[SchoolCapacity]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [Eligibility].[SchoolCapacity]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Eligibility].[SchoolCapacity]) [refTable]
 where [refTable].[scaSchId] = ? and [refTable].[scaGradeLevel] = ? and [refTable].[scaProgramId] = ? and [refTable].[scaYearContext] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -1581,7 +1656,7 @@ where [refTable].[scaSchId] = ? and [refTable].[scaGradeLevel] = ? and [refTable
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">exec [Eligibility].[UpsertSchoolCapacity] ?,?,?,?,?,?,?,?,?,?,?,?,?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">exec [Eligibility].[UpsertSchoolCapacity] ?,?,?,?,?,?,?,?,?,?,?,?,?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2356,14 +2431,14 @@ where [refTable].[scaSchId] = ? and [refTable].[scaGradeLevel] = ? and [refTable
               startId="Package\Data Flow Task\AspenSchool.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Sort Output]"
-              endId="Package\Data Flow Task\LastUpdated.Inputs[Derived Column Input]"
-              name="Sort Output"
-              startId="Package\Data Flow Task\Insert Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Sort Output1]"
               endId="Package\Data Flow Task\Update SchoolCapacity.Inputs[OLE DB Command Input]"
               name="Sort Output"
               startId="Package\Data Flow Task\Update sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Sort Output1]"
+              endId="Package\Data Flow Task\LastUpdated.Inputs[Derived Column Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task\Insert Sort.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2376,13 +2451,15 @@ where [refTable].[scaSchId] = ? and [refTable].[scaGradeLevel] = ? and [refTable
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; Â© 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{9AE2705B-C330-42D3-A894-7FD29A51E11A}"
-          SQLTask:SqlStatementSource="IF EXISTS(SELECt 1 from  Eligibility.SchoolCapacity SC &#xA;where (scaSCA_OID is null or scaSCA_OID = ' '))&#xA;BEGIN&#xA;&#xA;UPDATE   SC&#xA;SET SC.scaSCA_OID=a.SCA_OID&#xA;FROM&#xA;Eligibility.SchoolCapacity SC, (SELECT SKL_SCHOOL_ID ,&#xA;SCA_GRADE_LEVEL ,&#xA;SCA_PROGRAM_CODE ,&#xA;CTX_CONTEXT_ID ,&#xA;SCA_OID&#xA;FROM ASPENDB.x2data.dbo.SCHOOL&#xA;JOIN ASPENDB.x2data.dbo.SCHOOL_CAPACITY ON SKL_OID = SCA_SKL_OID&#xA;JOIN ASPENDB.x2data.dbo.DISTRICT_SCHOOL_YEAR_CONTEXT ON CTX_OID = SCA_CTX_OID&#xA;AND CTX_CONTEXT_ID &gt;= '2017-2018') a&#xA;where (scaSCA_OID is null or scaSCA_OID = ' ')&#xA;and scayearcontext &gt;='2017-2018'&#xA;and sc.scaschid collate SQL_Latin1_General_CP1_CI_AS=a.SKL_SCHOOL_ID&#xA;and sc.scaGradelevel collate SQL_Latin1_General_CP1_CI_AS =a.SCA_GRADE_LEVEL&#xA;and sc.scaProgramid collate SQL_Latin1_General_CP1_CI_AS =a.SCA_PROGRAM_CODE&#xA;END&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="IF EXISTS(SELECt 1 from  Eligibility.SchoolCapacity SC &#xA;where (scaSCA_OID is null or scaSCA_OID = ' '))&#xA;BEGIN&#xA;&#xA;UPDATE   SC&#xA;SET SC.scaSCA_OID=a.SCA_OID&#xA;FROM&#xA;Eligibility.SchoolCapacity SC, (SELECT SKL_SCHOOL_ID ,&#xA;SCA_GRADE_LEVEL ,&#xA;SCA_PROGRAM_CODE ,&#xA;CTX_CONTEXT_ID ,&#xA;SCA_OID&#xA;FROM ASPENDBCLOUD.aspen_ma_boston.dbo.SCHOOL&#xA;JOIN ASPENDBCLOUD.aspen_ma_boston.dbo.SCHOOL_CAPACITY ON SKL_OID = SCA_SKL_OID&#xA;JOIN ASPENDBCLOUD.aspen_ma_boston.dbo.DISTRICT_SCHOOL_YEAR_CONTEXT ON CTX_OID = SCA_CTX_OID&#xA;AND CTX_CONTEXT_ID &gt;= '2017-2018') a&#xA;where (scaSCA_OID is null or scaSCA_OID = ' ')&#xA;and scayearcontext &gt;='2017-2018'&#xA;and sc.scaschid collate SQL_Latin1_General_CP1_CI_AS=a.SKL_SCHOOL_ID&#xA;and sc.scaGradelevel collate SQL_Latin1_General_CP1_CI_AS =a.SCA_GRADE_LEVEL&#xA;and sc.scaProgramid collate SQL_Latin1_General_CP1_CI_AS =a.SCA_PROGRAM_CODE&#xA;END&#xA;&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -2409,11 +2486,11 @@ where [refTable].[scaSchId] = ? and [refTable].[scaGradeLevel] = ? and [refTable
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,42"
+          Size="151.2,41.6"
           Id="Package\Data Flow Task"
           TopLeft="129,134" />
         <NodeLayout
-          Size="163,42"
+          Size="163.2,41.6"
           Id="Package\Execute SQL Task"
           TopLeft="123,36" />
         <EdgeLayout
@@ -2447,61 +2524,39 @@ where [refTable].[scaSchId] = ? and [refTable].[scaGradeLevel] = ? and [refTable
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="134,42"
+          Size="134.4,41.6"
           Id="Package\Data Flow Task\Update sort"
           TopLeft="42,259" />
         <NodeLayout
-          Size="185,42"
+          Size="184.8,41.6"
           Id="Package\Data Flow Task\Insert Into School Cap"
           TopLeft="298,416" />
         <NodeLayout
-          Size="138,42"
+          Size="137.6,41.6"
           Id="Package\Data Flow Task\LastUpdated"
           TopLeft="329,344" />
         <NodeLayout
-          Size="167,42"
+          Size="167.2,41.6"
           Id="Package\Data Flow Task\SchoolCapacityLKP"
           TopLeft="176,168" />
         <NodeLayout
-          Size="129,42"
+          Size="128.8,41.6"
           Id="Package\Data Flow Task\Insert Sort"
           TopLeft="338,249" />
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\Data Flow Task\Data Conversion"
           TopLeft="174,102" />
         <NodeLayout
-          Size="138,42"
+          Size="137.6,41.6"
           Id="Package\Data Flow Task\AspenSchool"
           TopLeft="177,23" />
         <NodeLayout
-          Size="186,42"
+          Size="185.6,41.6"
           Id="Package\Data Flow Task\Update SchoolCapacity"
           TopLeft="15,352" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Sort Output1]"
-          TopLeft="108.5,301">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,51"
-              Start="0,0"
-              End="0,43.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
           TopLeft="400.25,291">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2514,6 +2569,28 @@ where [refTable].[scaSchId] = ? and [refTable].[scaGradeLevel] = ? and [refTable
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="108.5,301">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,51"
+              Start="0,0"
+              End="0,43.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
